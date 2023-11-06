@@ -5,9 +5,25 @@
 // Affichez le bouton
 
 const cards = document.querySelectorAll('.card')
-console.log(cards[0].children[2]);
+
 cards.forEach((card,ind)=>{
     card.addEventListener('click', ()=>{
-        cards[ind].children[2].style.display = 'block'
+        if(cards[ind].children[2].style.display == 'block'){
+            cards[ind].children[2].style.display = 'none'
+        } else {
+            cards[ind].children[2].style.display = 'block'
+        }
     })
 })
+
+/*
+cards.forEach((card,ind)=>{
+    card.addEventListener('click', (event)=>{
+        if(!btns[ind].classList.contains('btn-hide')){
+            btns[ind].classList.add('btn-hide')
+        } else {
+            btns[ind].classList.remove('btn-hide')
+        }
+    }) 
+})
+*/
